@@ -51,5 +51,7 @@
 - In my own experience, I found KSQLDB quite limited in terms of its SQL features.. Just keen to know if your experiences have been different
 - How we can prevent race condition when caching in case we are replicating data? Use locks and zookeeper does same
 - Alteratives for two-phase commits : SAGA Pattern
-- monorepo or polyrepo, which ones are better suited for microservice development for CI/CD and reusability - use polyrepo
+- monorepo or polyrepo, which ones are better suited for microservice development for CI/CD and reusability
+  - use polyrepo because of ownership in microservices
+  - Code build difficult for monorepo
  
