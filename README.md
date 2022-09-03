@@ -18,4 +18,8 @@
         May occur circular dependency
         
 # Q&A
--how do we handle the referential integrity constraints in the Monolithic DB when we moving out the invoicing db?
+- how do we handle the referential integrity constraints in the Monolithic DB when we moving out the invoicing db?
+   - JOINS at Service Tier
+   - We will call endoint to get referential data 
+   - We need to talk to stakeholders on acceptable Latency when we are making service level calls
+- Is it always worth building feature-parity split out into microservices as opposed to building new functionality as new services? Just knowing limited resource for all the work alongside maintaining the monolith ?
