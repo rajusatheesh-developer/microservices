@@ -15,3 +15,7 @@
      - Extract part of logic into separate service 
      - What ablout Data Hiding?
         Extract via Monolith using API then Move Data specific to that service
+        May occur circular dependency
+        
+# Q&A
+-how do we handle the referential integrity constraints in the Monolithic DB when we moving out the invoicing db?
