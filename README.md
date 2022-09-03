@@ -55,3 +55,4 @@
   - use polyrepo because of ownership in microservices
   - Code build difficult for monorepo
  
+How to handle a situation where you have a central configuration (like a central product or partner), where different modules depend on different parts of this configuration? split the configuration into the different services or have some central configuration service?
