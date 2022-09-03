@@ -14,4 +14,4 @@
    - Code First
      - Extract part of logic into separate service 
      - What ablout Data Hiding?
-        Extract via Monolith
+        Extract via Monolith using API then Move Data specific to that service
