@@ -33,7 +33,13 @@
         - what about source data changes ? Need to update all copies and copying takes time so performance measured on how to impl copy data
       - CHECK for use before Delete - Not preferred
          - Locks required
-      - Cascading Deletes using Events        
+      - Cascading Deletes using Events    
+- ksqlDB Architecture    
+- Cache
+    ![image](https://user-images.githubusercontent.com/105092237/188273263-9fbbca42-e185-4b55-8aae-3d0b90361a32.png)
+    - adds complexity
+    - 
+
 # Q&A
 - how do we handle the referential integrity constraints in the Monolithic DB when we moving out the invoicing db?
    - JOINS at Service Tier
@@ -41,3 +47,9 @@
    - We need to talk to stakeholders on acceptable Latency when we are making service level calls
 - Is it always worth building feature-parity split out into microservices as opposed to building new functionality as new services? Just knowing limited resource for all the work alongside maintaining the monolith ?
 - How to handle reporting needs where data from multiple microservices are needed? E.g sales in the last year. Does the Finance have to fetch all products from Catalog by Id (for details) or is there a better way of handling that? I saw cases where the list of Ids is so long that it does not fit as a query string.
+- How could a service like Netflix ever benefit from 1,000 different microservices, without the complexity overrunning any efficiency/scaling benefits? Scaling distributed monoliths or smaller numbers of microservices instead?
+- In my own experience, I found KSQLDB quite limited in terms of its SQL features.. Just keen to know if your experiences have been different
+- How we can prevent race condition when caching in case we are replicating data? Use locks and zookeeper does same
+- Alteratives for two-phase commits : SAGA Pattern
+- monorepo or polyrepo, which ones are better suited for microservice development for CI/CD and reusability - use polyrepo
+ 
