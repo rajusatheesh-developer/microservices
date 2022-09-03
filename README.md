@@ -5,3 +5,4 @@
 - Patterns
    - Database as Enpoint
    - Database views
+   - Change Data Capture - capture a change : Debezium and Kafka
